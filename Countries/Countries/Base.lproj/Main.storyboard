@@ -78,6 +78,7 @@
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pI-7e-yxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Ny4-d4-rsM" customClass="SplitViewControllerDelegate" customModule="Countries" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-892" y="-201"/>
         </scene>
