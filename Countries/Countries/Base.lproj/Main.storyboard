@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyj-EH-oJ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.16071428571422" y="123.18840579710145"/>
+            <point key="canvasLocation" x="1320" y="196"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="P2B-UG-WC6">
@@ -119,6 +119,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rQh-6V-9A8" kind="showDetail" identifier="ShowDetail" id="Xcf-9h-Wl9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -181,7 +184,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9UV-d3-Zto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.086956521739133" y="123.88392857142857"/>
+            <point key="canvasLocation" x="26" y="212"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xcf-9h-Wl9"/>
+    </inferredMetricsTieBreakers>
 </document>
