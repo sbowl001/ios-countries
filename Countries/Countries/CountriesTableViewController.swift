@@ -8,16 +8,39 @@
 
 import UIKit
 
-class CountriesTableViewController: UITableViewController {
+class CountriesTableViewController: UITableViewController, UISearchBarDelegate {
 
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
 let countryController = CountryController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+        self.searchBar.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = self.searchBar.text else {return}
+        
+        self.countryController.fetchCountry(searchTerm: searchTerm) { (countries, error) in
+            if let error = error {
+                NSLog("error searching for countries: \(error)")
+            }
+            if let countries = countries {
+                DispatchQueue.main.async {
+                    self.countryController.countries = countries
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
     // MARK: - Table view data source
 
   
